@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 787582357}
   - component: {fileID: 787582356}
   - component: {fileID: 787582360}
+  - component: {fileID: 787582361}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -352,6 +353,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &787582361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787582355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876b78365da89904db6ff5684fb5821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainHeroRB: {fileID: 787582360}
+  _animController: {fileID: 787582361}
 --- !u!1 &2027514210
 GameObject:
   m_ObjectHideFlags: 0
