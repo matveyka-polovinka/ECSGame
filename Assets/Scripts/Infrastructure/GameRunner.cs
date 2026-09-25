@@ -25,7 +25,6 @@ namespace Assets.Scripts.Infrastructure
 
             group.AddSystem(new InputPlayerMove());
             group.AddSystem(new InputPlayerJump());
-            group.AddSystem(new PlayerGravity());
             group.AddSystem(new MoveRigidbodySystem());
 
             world.AddSystemsGroup(0, group);
