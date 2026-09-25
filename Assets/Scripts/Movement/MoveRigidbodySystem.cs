@@ -28,7 +28,7 @@ namespace Assets.Scripts.Movement
                 ref RigidbodyComponent rbComponent = ref _rbStash.Get(entity);
                 ref InputComponent inputComponent = ref _inputStash.Get(entity);
 
-                rbComponent.Value.velocity = inputComponent.Value;
+                rbComponent.Value.velocity = inputComponent.Value + Vector3.up * rbComponent.Value.velocity.y;
             }
         }
     }

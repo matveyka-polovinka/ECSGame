@@ -20,7 +20,7 @@ namespace Assets.Scripts.InputProcessing.Systems
             foreach(Entity entity  in _controllEntities)
             {
                 ref InputComponent inputDirection = ref _stash.Get(entity);
-                inputDirection.Value = Vector3.up * inputDirection.Value.y;
+                inputDirection.Value = Vector3.zero;
                 inputDirection.Value += input;
             }
         }

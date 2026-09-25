@@ -23,7 +23,7 @@ namespace Assets.Scripts.InputProcessing.Systems
                 ref RigidbodyComponent rb = ref _stash.Get(entity);
 
                 if (Physics.Raycast(rb.Value.position, Vector3.down, out hit, 1.1f))
-                    rb.Value.AddForce(input * 100, ForceMode.Impulse);
+                    rb.Value.AddForce(input * 7, ForceMode.Impulse);
             }
         }
         RaycastHit hit;
