@@ -27,12 +27,11 @@ namespace Assets.Scripts.Infrastructure
 
             var group = world.CreateSystemsGroup();
 
-            group.AddSystem(new InputPlayerMove());
-            group.AddSystem(new InputPlayerJump());
-            group.AddSystem(new MoveRigidbodySystem());
-            group.AddSystem(new AnimationControlSystem());
+            
 
-            world.AddSystemsGroup(0, group);
+           
+
+            world.AddSystemsGroup(0, AddSystem.GetSystemGroup(group));
 
             world.Commit();
         }

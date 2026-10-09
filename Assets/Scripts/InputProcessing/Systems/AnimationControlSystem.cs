@@ -29,9 +29,7 @@ namespace Assets.Scripts.InputProcessing.Systems
                 ref AnimationComponent anim = ref _anim.Get(entity);
                 ref RigidbodyComponent rb = ref _rb.Get(entity);
 
-                //Debug.Log(rb.Value.velocity);
-
-                if (rb.Value.velocity.x != 0f && rb.Value.velocity.z != 0f) anim.Value.SetRun();
+                if (rb.Value.velocity.x != 0f || rb.Value.velocity.z != 0f) anim.Value.SetRun();
                 else anim.Value.SetIdle();
 
                 if (rb.Value.velocity.y > 0f) anim.Value.SetJump();
