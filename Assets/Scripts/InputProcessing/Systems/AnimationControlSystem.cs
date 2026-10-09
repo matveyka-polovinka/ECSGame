@@ -31,8 +31,10 @@ namespace Assets.Scripts.InputProcessing.Systems
 
                 //Debug.Log(rb.Value.velocity);
 
-                if (rb.Value.velocity != Vector3.zero) anim.Value.SetRun();
+                if (rb.Value.velocity.x != 0f && rb.Value.velocity.z != 0f) anim.Value.SetRun();
                 else anim.Value.SetIdle();
+
+                if (rb.Value.velocity.y > 0f) anim.Value.SetJump();
             }
         }
     }
