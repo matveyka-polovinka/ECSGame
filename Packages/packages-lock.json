@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.codewriter.triinspector": {
-      "version": "file:C:/Users/user/Desktop/Tri-Inspector-1.15.1",
+      "version": "file:C:/Users/Виктор/Desktop/Tri-Inspector-1.15.1",
       "depth": 0,
       "source": "local",
       "dependencies": {
