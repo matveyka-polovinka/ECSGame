@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.codewriter.triinspector": "file:C:/Users/user/Desktop/Tri-Inspector-1.15.1",
+    "com.codewriter.triinspector": "file:C:/Users/Виктор/Desktop/Tri-Inspector-1.15.1",
     "com.scellecs.morpeh": "https://github.com/scellecs/morpeh.git?path=Scellecs.Morpeh",
     "com.unity.collab-proxy": "2.12.4",
     "com.unity.feature.development": "1.0.1",
