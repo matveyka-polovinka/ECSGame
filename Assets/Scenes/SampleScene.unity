@@ -477,8 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5538f51d833c57147912c7c7e1c079e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainHeroRB: {fileID: 787582360}
-  _animController: {fileID: 787582361}
+  _mainHeroCustomizer:
+    _rb: {fileID: 787582360}
+    _anim: {fileID: 787582361}
 --- !u!1001 &1433436869
 PrefabInstance:
   m_ObjectHideFlags: 0
