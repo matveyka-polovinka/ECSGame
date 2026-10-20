@@ -1,17 +1,19 @@
+using Scellecs.Morpeh;
 using UnityEngine;
 
 namespace Assets.Scripts.UI.Joysticks
 {
-    public sealed class JoysctickController : MonoBehaviour
+    public sealed class JoystickController : MonoBehaviour
     {
         [SerializeField] private Joystick _j;
-        public Vector2 Input { get; private set; }
+        public Vector3 Input { get; private set; }
         private void Update()
         {
-            Input = new Vector2
+            Input = new Vector3
             (
-                Fix(_j.Vertical),
-                Fix(_j.Horizontal)
+                Fix(_j.Horizontal),
+                0f,
+                Fix(_j.Vertical)
             );
         }
         private const float Threshold = 0.3f;
@@ -20,7 +22,11 @@ namespace Assets.Scripts.UI.Joysticks
         {
             abs = Mathf.Abs(input);
             if (abs > Threshold) return input / abs;
-            else return 0;
+            else return 0f;
         }
+    }
+    public struct JoystickComponent : IComponent
+    {
+        public JoystickController Value;
     }
 }
