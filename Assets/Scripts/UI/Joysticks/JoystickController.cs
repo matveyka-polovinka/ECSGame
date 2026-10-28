@@ -6,7 +6,7 @@ namespace Assets.Scripts.UI.Joysticks
     public sealed class JoystickController : MonoBehaviour
     {
         [SerializeField] private Joystick _j;
-        public Vector3 Input { get; private set; }
+        [field:SerializeField] public Vector3 Input { get; private set; }
         private void Update()
         {
             Input = new Vector3

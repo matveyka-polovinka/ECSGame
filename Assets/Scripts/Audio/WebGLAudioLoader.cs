@@ -1,3 +1,4 @@
+using Assets.Scripts.Audio;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,11 @@ public class WebGLAudioLoader : MonoBehaviour
     private AudioClip _targetClip;
     private bool _isLoadProcessCompleted = false;
     private static Dictionary<string, AudioClip> _clipCash = new Dictionary<string, AudioClip>();
+
+    public bool IsProcessLoad() => _isLoadProcessCompleted;
+    public AudioClip GetAudioClip() => _targetClip;
+    public void ClearCash() => _clipCash.Clear();
+    public bool IsClipCashed(string name) => _clipCash.ContainsKey(name);
 
     public void LoadAudio(string name)
     {
@@ -70,8 +76,8 @@ public class WebGLAudioLoader : MonoBehaviour
 
             if (_targetClip.loadState != AudioDataLoadState.Loaded) yield return null;
 
-            _isLoadProcessCompleted = true;
             bundle.Unload(false);
+            _isLoadProcessCompleted = true;
         }
     }
     public string GetDirectoryPath()
