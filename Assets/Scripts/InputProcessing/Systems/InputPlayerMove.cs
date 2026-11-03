@@ -25,8 +25,23 @@ namespace Assets.Scripts.InputProcessing.Systems
         }
         public void OnUpdate(float deltaTime)
         {
-
             Vector3 input = _joystick.Value.Input;
+
+            if (input == Vector3.zero)
+            {
+                var h = Input.GetAxis("Horizontal");
+                var v = Input.GetAxis("Vertical");
+
+                var ah = Mathf.Abs(h);
+                var av = Mathf.Abs(v);
+
+                input = new Vector3
+                (
+                    ah >= JoystickController.Threshold ? ah/h : 0,
+                    0,
+                    av >= JoystickController.Threshold ? av/v : 0
+                );
+            }
 
             foreach(Entity entity  in _controllEntities)
             {
