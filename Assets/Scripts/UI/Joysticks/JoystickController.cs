@@ -16,7 +16,7 @@ namespace Assets.Scripts.UI.Joysticks
                 Fix(_j.Vertical)
             );
         }
-        private const float Threshold = 0.3f;
+        public const float Threshold = 0.3f;
         private float abs;
         private float Fix(float input)
         {
