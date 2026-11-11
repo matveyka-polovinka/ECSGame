@@ -643,6 +643,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Standalone: MORPEH;MORPEH_BURST
+    WebGL: MORPEH;MORPEH_BURST
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
