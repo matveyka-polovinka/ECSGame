@@ -22,7 +22,7 @@ namespace YG.Insides
             {
                 if (InfoYG.instance && InfoYG.instance.Basic.platform)
                     return InfoYG.instance.Basic.platform.nameFull.Replace("Integration", "").Replace("Platform", "");
-                return "Null";
+                return "Idle";
             }
         }
 

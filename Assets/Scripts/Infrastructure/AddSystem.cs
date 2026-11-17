@@ -1,3 +1,4 @@
+using Assets.Scripts.Audio;
 using Assets.Scripts.InputProcessing.Systems;
 using Assets.Scripts.Movement;
 using Scellecs.Morpeh;
@@ -10,6 +11,7 @@ public static class AddSystem
         new InputPlayerJump(),
         new MoveRigidbodySystem(),
         new AnimationControlSystem(),
+        new PlayMovementAudioSystem(),
     };
     public static SystemsGroup GetSystemGroup(SystemsGroup group)
     {
