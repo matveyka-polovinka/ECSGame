@@ -2,10 +2,14 @@ using Assets.Scripts.Audio;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 public class WebGLAudioLoader : MonoBehaviour
 {
+#if UNITY_EDITOR
+    [SerializeField] private List<AudioClip> clipList;
+#endif
     private AudioClip _targetClip;
     private bool _isLoadProcessCompleted = false;
     private static Dictionary<string, AudioClip> _clipCash = new Dictionary<string, AudioClip>();
@@ -18,6 +22,18 @@ public class WebGLAudioLoader : MonoBehaviour
     public void LoadAudio(string name)
     {
         _isLoadProcessCompleted = false;
+
+#if UNITY_EDITOR
+        foreach (var clip in clipList)
+        {
+            if (clip.name.Split('.').First().Contains(name))
+            {
+                _targetClip = clip;
+                _isLoadProcessCompleted = true;
+                return;
+            }
+        }
+#endif
 
         StartCoroutine(LoadAudioFromAssetBundle(name));
     }
