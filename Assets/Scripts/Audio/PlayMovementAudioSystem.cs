@@ -25,7 +25,7 @@ namespace Assets.Scripts.Audio
         {
             set
             {
-                if (_last == value || value == PlayerSoundState.Idle) return;
+                if (_last == value || value == PlayerSoundState.Idle) Sound.StopPlayMain.Invoke();
                 else Sound.Play.Invoke(SOUNDS[value]);
             }
         }
